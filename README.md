@@ -4,7 +4,7 @@
 
 **DreamStay** is a full-stack web application built to simulate the core functionality of a modern vacation-rental marketplace. Users can explore property listings, view detailed information, create and manage listings, leave reviews, and interact with the application through a responsive web interface.
 
-The project was developed as a **solo full-stack application**, covering the complete development flow from frontend rendering and backend APIs to database management, authentication, validation, image uploads, session management, and deployment.
+The project was developed as a **solo full-stack application**, covering the complete development flow from frontend rendering and backend request handling to database management, authentication, validation, image uploads, session management, and deployment.
 
 ---
 
@@ -18,18 +18,7 @@ The project was developed as a **solo full-stack application**, covering the com
 * Edit existing listings.
 * Delete listings.
 * Display property images and relevant listing information.
-* Search listings based on user input.
-* Filter listings using predefined categories.
 * Responsive listing interface.
-
-### 🔍 Search & Filtering
-
-DreamStay provides users with multiple ways to discover properties:
-
-* Search functionality for finding relevant listings.
-* Category-based filtering.
-* Interactive filters for different property types.
-* Tax toggle to display prices with or without applicable taxes.
 
 ### ⭐ Reviews & Ratings
 
@@ -97,14 +86,14 @@ User sessions are persisted using:
 
 MongoDB is therefore used not only for application data but also for persistent session storage.
 
-### 💰 Tax Display
+## 💰 Tax Display
 
-DreamStay includes a client-side tax toggle that allows users to switch between:
+DreamStay includes a client-side tax information toggle on the listings page.
 
-* Base listing prices
-* Prices including applicable taxes
+* Users can toggle the visibility of tax information.
+* The interface displays the applicable 18% GST information alongside the listing price.
 
-This provides a more realistic pricing experience for users browsing properties.
+> Note: The current implementation displays the tax information but does not dynamically recalculate the final price.
 
 ---
 
@@ -237,7 +226,7 @@ DreamStay/
 │   ├── users/
 │   └── includes/
 │
-├── middleware.js
+├── middlewares.js
 ├── app.js
 ├── schema.js
 ├── package.json
@@ -539,7 +528,7 @@ DreamStay was built to go beyond basic CRUD functionality and demonstrates sever
 
 ### Backend Development
 
-* RESTful routing
+* REST-style routing
 * Express middleware
 * MVC-style organization
 * CRUD operations
@@ -597,6 +586,9 @@ The primary goals of DreamStay were to:
 
 Potential improvements for future versions include:
 
+* 🔎 Backend-powered listing search.
+* 🏷️ Category-based listing filtering.
+* 💰 Dynamic tax calculation.
 * 🗺️ Interactive maps for listing locations.
 * 📍 Location-based search.
 * 📅 Availability and booking management.
@@ -635,11 +627,14 @@ Key takeaways include:
 
 # 📌 Project Status
 
-**Status: Completed**
+**Status: Completed — Core Features**
 
-DreamStay is a functional full-stack application with the core listing, authentication, review, search, image-upload, validation, and deployment functionality implemented.
+DreamStay is a functional full-stack application with core listing,
+authentication, review, image-upload, validation, session management,
+and deployment functionality implemented.
 
-The project can be extended further with booking, maps, payments, notifications, and other marketplace features.
+Additional marketplace features such as search, category-based filtering,
+booking, payments, notifications, and maps can be added in future iterations.
 
 ---
 
