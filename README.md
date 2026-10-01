@@ -62,7 +62,6 @@ Validation is applied to important application resources such as:
 
 * Listings
 * Reviews
-* User-submitted form data
 
 This prevents malformed or invalid data from being processed by the application.
 
@@ -232,8 +231,6 @@ DreamStay/
 ├── package.json
 └── README.md
 ```
-
-> The exact structure may vary slightly depending on the current version of the repository.
 
 ---
 
